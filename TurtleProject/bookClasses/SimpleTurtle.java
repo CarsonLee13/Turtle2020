@@ -508,7 +508,7 @@ public class SimpleTurtle
    * Method to move the turtle forward the given number of pixels 
    * @param pixels the number of pixels to walk forward in the heading direction
    */
-  public void forward(int pixels)
+  public void forward(double pixels)
   {
     int oldX = xPos;
     int oldY = yPos;

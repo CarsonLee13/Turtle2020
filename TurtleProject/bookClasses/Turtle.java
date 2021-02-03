@@ -3,6 +3,7 @@ package bookClasses;
 import java.util.*;
 import java.awt.*;
 
+
 /**
  * Class that represents a turtle which is similar to a Logo turtle.
  * This class inherts from SimpleTurtle and is for students
@@ -13,6 +14,7 @@ import java.awt.*;
  */
 public class Turtle extends SimpleTurtle
 {
+   Random gen = new Random();
   ////////////////// constructors ///////////////////////
 
   /** Constructor that takes the x and y and a picture to
@@ -67,14 +69,14 @@ public class Turtle extends SimpleTurtle
     World earth = new World();
     Turtle t1 = new Turtle(earth);
     t1.forward();
-    t1.square(25);
+    t1.drawSquare(25);
   }
   /**
    * Square - draw a square of n length
    * @param side length
    */
 
-  public void square(int side)
+  public void drawSquare(int side)
   {
       forward(side);
       turn(90);
@@ -87,5 +89,86 @@ public class Turtle extends SimpleTurtle
 
 
   }
-
+  public void randomWalk(int steps)
+  {
+      for(int i = 5; i>=0; --i){
+      forward(steps);
+      turn(gen.nextInt(90));
+    }
+    }
+  public void drawRec(int width, int height)
+  {
+     forward(width);
+     turn(90);
+     forward(height);
+     turn(90);
+     forward(width);
+     turn(90);
+     forward(height);
+    }
+  public void drawEquilateralTriangle(int side)
+  { 
+      forward(side);
+      turn(120);
+      forward(side);
+      turn(120);
+      forward(side);
+    }
+  public void drawHex(int side)
+  {
+      forward(side);
+      turn(60);
+      forward(side);
+      turn(60);
+      forward(side);
+      turn(60);
+      forward(side);
+      turn(60);
+      forward(side);
+      turn(60);
+      forward(side);
+      
+    }
+  public void drawCircle(int radius)
+  {
+     
+      
+      for (int i = 1; i<=180; ++i)
+       {
+           forward(radius*0.034906585);
+           turn(2);
+        }
+      
+      
+    }
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 } // this } is the end of class Turtle, put all new methods before this

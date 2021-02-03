@@ -25,10 +25,10 @@ public class World extends JComponent implements ModelDisplay
   private Color background = Color.white;
 
   /** the width of the world */
-  private int width = 640;
+  private int width = 1920;
 
   /** the height of the world */
-  private int height = 480;
+  private int height = 1080;
 
   /** the list of turtles in the world */
   private List<Turtle> turtleList = new ArrayList<Turtle>();

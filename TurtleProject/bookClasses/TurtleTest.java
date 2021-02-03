@@ -21,7 +21,7 @@ public class TurtleTest
       turtleArray[i].forward(100);
     }
     me.moveTo(200,200);
-    me.square(200);
+    me.drawSquare(200);
     world.setVisible(true);
 
   }
